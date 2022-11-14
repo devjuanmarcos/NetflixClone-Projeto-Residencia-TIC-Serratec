@@ -1,16 +1,12 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import Login from './src/pages/Login';
+import {Provider as PaperProvider} from 'react-native-paper';
 
-const HelloWorldApp = () => {
+const App = () => {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-      <Text>Hello, world!</Text>
-    </View>
-  )
-}
-export default HelloWorldApp;
+    <PaperProvider>
+    <Login />
+    </PaperProvider>
+  );
+};
+export default App;
