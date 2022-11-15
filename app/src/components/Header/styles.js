@@ -11,6 +11,7 @@ const styles = StyleSheet.create({
         zIndex: 999,
     },
     headerSafeAreaView: {
+        paddingRight: 100,
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         width: '100%',

@@ -13,8 +13,6 @@ const Home = () => {
         <View style={styles.container}>
             <Header/>
             <Hero/>
-            
-        <Text>Home</Text>
         </View>
     );
 };
