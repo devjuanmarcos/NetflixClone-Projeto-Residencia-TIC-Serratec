@@ -3,10 +3,11 @@ import { Text, View, TouchableOpacity } from "react-native";
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import styles from './styles';
+import { Button } from 'react-native-paper';
 
 import Header from '../../components/Header';
 import Hero from '../../components/Hero';
-
+import ButtonVertical from "../../components/ButtonVertical";
 
 
 const Home = () => {
@@ -16,14 +17,13 @@ const Home = () => {
             <Hero />
 
             <View style={styles.menuHeader}>
-                <TouchableOpacity style={styles.menuButton}>
-                    <Icon name="plus" color= "#fff" size= {20}/>
-                    <Text style={styles.buttonText}>Minha Lista</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.menuButton}>
-                    <Icon name="information-outline" color= "#fff" size= {20}/>
-                    <Text style={styles.buttonText}>Saiba mais</Text>
-                </TouchableOpacity>
+                <ButtonVertical icon="plus" text="Minha Lista"/>
+                <Button icon="play" uppercase={false} mode="contained" color="#fff">
+                    Assitir
+                </Button>
+                <ButtonVertical icon="information-outline" text="Saiba Mais"/>
+
+                
             </View>
 
         </View>

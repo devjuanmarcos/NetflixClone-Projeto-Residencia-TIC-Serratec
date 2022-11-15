@@ -11,14 +11,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-evenly'
     },
-    buttonText: {
-        color: '#fff'
-    },
-    menuButton: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        
-    }
+   
 })
 
 export default styles;
