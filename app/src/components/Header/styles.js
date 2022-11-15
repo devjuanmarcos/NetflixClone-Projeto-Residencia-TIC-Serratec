@@ -13,7 +13,6 @@ const styles = StyleSheet.create({
     headerSafeAreaView: {
         flexDirection: 'row',
         justifyContent: 'space-evenly',
-        backgroundColor: '#f90',
         width: '100%',
         height: 70,
 
