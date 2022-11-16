@@ -19,6 +19,7 @@ const App = () => {
   return (
     <PaperProvider theme={theme}>
       <Home />
+     
     </PaperProvider>
   );
 };
