@@ -1,6 +1,8 @@
 import React from 'react';
 import Login from './src/pages/Login';
 import Home from './src/pages/Home'
+import Filme from './src/pages/Filme'
+
 import { DefaultTheme, Provider as PaperProvider } from 'react-native-paper';
 
 const App = () => {
@@ -18,7 +20,7 @@ const App = () => {
 
   return (
     <PaperProvider theme={theme}>
-      <Home />
+      <Filme />
      
     </PaperProvider>
   );

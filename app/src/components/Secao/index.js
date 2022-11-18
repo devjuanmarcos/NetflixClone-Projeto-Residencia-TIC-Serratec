@@ -15,7 +15,7 @@ const Secao = ({ hasTopBorder }) => {
                 data={[1, 2, 3, 4, 5, 6]}
                 renderItem={({ item, index }) => (
                     <TouchableOpacity key={index}>
-                        <ImageBackground
+                        <ImageBackground data
                             style={[styles.capa, { marginRight: 10, marginLeft: index == 0 ? 20 : 0 }]}
                             source={{
                                 uri: 'https://i.imgur.com/EJyDFeY.jpg'
