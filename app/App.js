@@ -20,7 +20,7 @@ const App = () => {
 
   return (
     <PaperProvider theme={theme}>
-      <Filme />
+      <Home />
      
     </PaperProvider>
   );
