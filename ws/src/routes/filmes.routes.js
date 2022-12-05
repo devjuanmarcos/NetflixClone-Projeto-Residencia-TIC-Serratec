@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const Filme = require("../models/filme");
 
 // recuperar todos os registros
 router.get("/", (req, res) => {
