@@ -46,9 +46,14 @@ router.put("/:id", async (req, res) => {
 });
 
 // deletar registro somente com o id
-router.delete("/:id", (req, res) => {
-  const id = req.params.id;
-  res.json({ mensagem: `DELETAR SOMENTE O REGISTRO COM O ID: ${id}` });
+router.delete("/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    await Filme.findByIdAndDelete(id);
+    res.json({ error: false });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
 });
 
 module.exports = router;
