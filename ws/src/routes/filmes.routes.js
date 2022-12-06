@@ -13,9 +13,14 @@ router.get("/", async (req, res) => {
 });
 
 // pegar registro somente com o id
-router.get("/:id", (req, res) => {
-  const id = req.params.id;
-  res.json({ mensagem: `PEGAR SOMENTE O REGISTRO COM O ID: ${id}` });
+router.get("/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const filme = await Filme.findById(id);
+    res.json({ error: false, filme });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
 });
 
 // criar um registro
