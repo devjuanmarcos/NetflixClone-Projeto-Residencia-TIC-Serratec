@@ -3,8 +3,13 @@ const router = express.Router();
 const Filme = require("../models/filme.js");
 
 // recuperar todos os registros
-router.get("/", (req, res) => {
-  res.json({ mensagem: "PEGAR TODOS OS REGISTROS" });
+router.get("/", async (req, res) => {
+  try {
+    const filmes = await Filme.find({});
+    res.json({ error: false, filmes });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
 });
 
 // pegar registro somente com o id
