@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Filme = require("../models/filme");
+const Filme = require("../models/filme.js");
 
 // recuperar todos os registros
 router.get("/", (req, res) => {
@@ -14,9 +14,14 @@ router.get("/:id", (req, res) => {
 });
 
 // criar um registro
-router.post("/", (req, res) => {
-  const body = req.body;
-  res.json(body);
+router.post("/", async (req, res) => {
+  try {
+    const filme = req.body;
+    const response = await new Filme(filme).save();
+    res.json({ error: false, filme: response });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
 });
 
 // atualizar registro somente com o id

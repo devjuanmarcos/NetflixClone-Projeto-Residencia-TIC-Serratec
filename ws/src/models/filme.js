@@ -1,11 +1,14 @@
 const mongoose = require("mongoose");
 
 const Filme = mongoose.model("Filme", {
-  titulo: String,
+  titulo: {
+    type: String,
+    required: true,
+  },
   atores: Array,
   ano: Number,
   detalhes: Object,
-  premicoes: [Object],
+  premiacoes: [Object],
 });
 
 module.exports = Filme;

@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const app = express();
 
 const routes = require("./src/routes/filmes.routes");
-mongoose.connect("mongodb://localhost:27017/netflix", {
+mongoose.connect("mongodb://0.0.0.0:27017/netflix", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
