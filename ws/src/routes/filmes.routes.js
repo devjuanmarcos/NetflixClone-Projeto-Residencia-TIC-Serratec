@@ -33,11 +33,16 @@ router.post("/", async (req, res) => {
     res.json({ error: true, message: err.message });
   }
 });
-
 // atualizar registro somente com o id
-router.put("/:id", (req, res) => {
-  const id = req.params.id;
-  res.json({ mensagem: `ATUALIZAR SOMENTE O REGISTRO COM O ID: ${id}` });
+router.put("/:id", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const novo_filme = req.body;
+    const filme = await Filme.findByIdAndUpdate(id, novo_filme);
+    res.json({ error: false, filme });
+  } catch (err) {
+    res.json({ error: true, message: err.message });
+  }
 });
 
 // deletar registro somente com o id
