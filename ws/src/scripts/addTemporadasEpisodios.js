@@ -5,7 +5,7 @@ const Episodio = require("../models/episodio");
 
 const addTemporadasEpisodios = async () => {
   try {
-    const series = await Filme.find({ tipo: "serie" }).select("_id");
+    const series = await Filme.find({ type: "serie" }).select("_id");
     for (let serie of series) {
       console.log(`FILME ${serie}------`);
       const numTemporadas = Math.floor(Math.random() * 5) + 1;
