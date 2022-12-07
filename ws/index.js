@@ -7,6 +7,7 @@ const app = express();
 
 const filmeRoutes = require("./src/routes/filmes.routes");
 const usuarioRoutes = require("./src/routes/usuarios.routes");
+const episodiosRoutes = require("./src/routes/episodios.routes");
 
 /// MIDDLEWARES
 app.use(bodyParser.json());
@@ -16,6 +17,7 @@ app.use(morgan("dev"));
 /// ROUTES
 app.use("/", filmeRoutes);
 app.use("/usuario", usuarioRoutes);
+app.use("/episodio", episodiosRoutes);
 
 app.listen(3000, () => {
   console.log("Meu servidor está funcionando");
