@@ -5,6 +5,7 @@ const Episodio = require("../models/episodio");
 router.get("/temporada/:temporada", async (req, res) => {
   try {
     const temporada_id = req.params.temporada;
+    console.log(temporada_id);
     const episodios = await Episodio.find({
       temporada_id,
     });

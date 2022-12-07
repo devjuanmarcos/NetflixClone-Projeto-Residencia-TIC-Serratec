@@ -20,7 +20,7 @@ const addTemporadasEpisodios = async () => {
         for (let x = 1; x <= numEpisodios; x++) {
           console.log(`Inserindo episódios ${x} de ${numEpisodios}`);
           await new Episodio({
-            temporada: temporada._id,
+            temporada_id: temporada._id,
             titulo: `Episodios ${x}`,
             numero: x,
             descricao:
